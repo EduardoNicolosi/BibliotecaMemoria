@@ -1,23 +1,22 @@
 CREATE DATABASE  bibliotecamemoria;
 
-
 USE bibliotecamemoria;
 
 CREATE TABLE IF NOT EXISTS livros (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
-    imagem LONGBLOB, 
     ano_lancamento INT NOT NULL,
     autor VARCHAR(255) NOT NULL
 );
 
 USE bibliotecamemoria;
-INSERT INTO livros (nome, imagem, ano_lancamento, autor) VALUES
-('O Senhor dos Anéis', NULL, 1954, 'J.R.R. Tolkien'),
-('1984', NULL, 1949, 'George Orwell'),
-('Moby Dick', NULL, 1851, 'Herman Melville'),
-('Orgulho e Preconceito', NULL, 1813, 'Jane Austen'),
-('Dom Quixote', NULL, 1805, 'Miguel de Cervantes');
+
+INSERT INTO livros (nome,ano_lancamento, autor) VALUES
+('O Senhor dos Anéis', 1954, 'J.R.R. Tolkien'),
+('1984', 1949, 'George Orwell'),
+('Moby Dick', 1851, 'Herman Melville'),
+('Orgulho e Preconceito', 1813, 'Jane Austen'),
+('Dom Quixote', 1805, 'Miguel de Cervantes');
 
 USE bibliotecamemoria;
 SELECT * from livros
